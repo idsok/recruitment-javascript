@@ -6,7 +6,7 @@ const ts = require('gulp-typescript');
 let options = {
     output: '.',
     compile: [ './src/**/*.ts' ],
-    remove: [ 'lib/', 'test/', 'app.js' ]
+    remove: [ 'lib/', 'test/', 'app.js', 'data.js' ]
 };
 
 gulp.task('clean', () => {
