@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const del = require('del');
 const ts = require('gulp-typescript');
 
-let options = {
+const options = {
     output: '.',
     compile: [ './src/**/*.ts' ],
     remove: [ 'lib/', 'test/', 'app.js', 'data.js' ]

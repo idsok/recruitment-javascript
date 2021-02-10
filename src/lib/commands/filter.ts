@@ -2,7 +2,7 @@ import { ICommand, ICountry, IPerson } from '../interfaces';
 
 export class FilterCommand implements ICommand {
 
-    public readonly name: string = '--filter';
+    public static readonly $name: string = '--filter';
 
     constructor() {}
 

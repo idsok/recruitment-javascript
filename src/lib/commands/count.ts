@@ -2,7 +2,7 @@ import { ICommand, ICountry } from '../interfaces';
 
 export class CountCommand implements ICommand {
 
-    public readonly name: string = '--count';
+    public static readonly $name: string = '--count';
 
     constructor() {}
 

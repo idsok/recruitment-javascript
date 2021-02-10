@@ -21,7 +21,7 @@ export class CommandsController {
     public executeCommand(name: string, param?: string): ICountry[] {
         const command = this.commands.get(name);
         if (!command) {
-            throw new Error(`Command <${name}> not supported !`)
+            throw new Error(`Command '${name}' not supported !`)
         }
         return command.execute(this.data, param);
     }

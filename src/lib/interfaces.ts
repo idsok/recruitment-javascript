@@ -17,7 +17,5 @@ export interface IAnimal {
 /************ Command **************/
 
 export interface ICommand {
-    readonly name: string;
-
     execute(countries: ICountry[], param?: string): ICountry[];
 }

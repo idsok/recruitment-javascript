@@ -4,7 +4,7 @@
 
 ### Install 
 
-### Download and install [Nodejs](https://nodejs.org/)
+#### Download and install [Nodejs](https://nodejs.org/)
 
 #### Install [Gulp](https://gulpjs.com/)
 
@@ -14,15 +14,19 @@
 
 `npm install -g typescript`
 
-## Install development environment libraries
+#### Install development environment libraries
 
 `npm install`
 
-## Test
+#### compile source
+
+`gulp`
+
+#### Test
 
 `npm test`
 
-## Run application
+#### Run application
 
 `node app --help` : Help
 `node app --filter=ry` : Filter
