@@ -9,16 +9,16 @@ const assert = chai.assert;
 describe('Filter command', () => {
     it('Check the number of data objects with filter=ry', () => {
         const filterCommand = new filter_1.FilterCommand();
-        const result = filterCommand.execute(data_1.data, 'ry');
-        expect(result.length, 'Number countries not equals 2').eq(2);
-        expect(result[0].people.length, 'Number people not equals 1').eq(1);
-        expect(result[1].people.length, 'Number people not equals 1').eq(1);
-        expect(result[0].people[0].animals.length, 'Number animals not equals 1').eq(1);
-        expect(result[1].people[0].animals.length, 'Number animals not equals 1').eq(1);
+        const countriesFound = filterCommand.execute(data_1.data, 'ry');
+        expect(countriesFound.length, 'Number countries not equals 2').eq(2);
+        expect(countriesFound[0].people.length, 'Number people not equals 1').eq(1);
+        expect(countriesFound[1].people.length, 'Number people not equals 1').eq(1);
+        expect(countriesFound[0].people[0].animals.length, 'Number animals not equals 1').eq(1);
+        expect(countriesFound[1].people[0].animals.length, 'Number animals not equals 1').eq(1);
     });
     it('Check the number of data objects with filter=zzz', () => {
         const filterCommand = new filter_1.FilterCommand();
-        const result = filterCommand.execute(data_1.data, 'zzz');
-        expect(result.length, 'Number countries not equals 0').eq(0);
+        const countriesFound = filterCommand.execute(data_1.data, 'zzz');
+        expect(countriesFound.length, 'Number countries not equals 0').eq(0);
     });
 });

@@ -2,10 +2,10 @@
 /******* Input data ***********/
 export interface ICountry {
     name: string;
-    people: IPeople[];
+    people: IPerson[];
 }
 
-export interface IPeople {
+export interface IPerson {
     name: string;
     animals: IAnimal[];
 }
