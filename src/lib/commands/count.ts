@@ -1,7 +1,11 @@
 import { ICommand, ICountry } from '../interfaces';
 
 export class CountCommand implements ICommand {
+
+    public readonly name: string = '--count';
+
     constructor() {}
+
     public execute(countries: ICountry[]): ICountry[] {
         const result: ICountry[] = [];
         for (const country of countries) {

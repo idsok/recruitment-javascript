@@ -10,6 +10,7 @@ const assert = chai.assert;
 describe('Filter command', () => {
 
     it('Check the number of data objects with filter=ry', () => {
+        
         const filterCommand: ICommand = new FilterCommand();
         const countriesFound: ICountry[] = filterCommand.execute(data as Array<ICountry>, 'ry');
 
@@ -25,7 +26,7 @@ describe('Filter command', () => {
     it('Check the number of data objects with filter=zzz', () => {
         const filterCommand: ICommand = new FilterCommand();
         const countriesFound: ICountry[] = filterCommand.execute(data as Array<ICountry>, 'zzz');
-        
+
         expect(countriesFound.length, 'Number countries not equals 0').eq(0);
     });
 });

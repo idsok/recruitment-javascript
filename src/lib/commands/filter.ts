@@ -1,7 +1,11 @@
 import { ICommand, ICountry, IPerson } from '../interfaces';
 
 export class FilterCommand implements ICommand {
+
+    public readonly name: string = '--filter';
+
     constructor() {}
+
     public execute(countries: ICountry[], filter: string): ICountry[] {
         const result: ICountry[] = [];
         for (const country of countries) {

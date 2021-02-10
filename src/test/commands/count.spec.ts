@@ -10,6 +10,7 @@ const assert = chai.assert;
 describe('Count command', () => {
     
     it('check the number of items found', () => {
+        
         const countCommand: ICommand = new CountCommand();
         const countries: ICountry[] = countCommand.execute(data as Array<ICountry>);
 
