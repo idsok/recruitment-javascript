@@ -17,5 +17,5 @@ export interface IAnimal {
 /************ Command **************/
 
 export interface ICommand {
-    execute(countries: ICountry[]): ICountry[];
+    execute(countries: ICountry[], param?: string): ICountry[];
 }
