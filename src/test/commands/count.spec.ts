@@ -18,10 +18,10 @@ describe('Count command', () => {
         expect(countries[0].name).to.be.equal(`${ data[0].name } [${ data[0].people.length }]`);
         expect(countries[0].people[0].name).to.be.equal(`${ data[0].people[0].name } [${ data[0].people[0].animals.length }]`);
 
-        expect(countries[1].name).to.be.equal(`${ data[0].name } [${ data[1].people.length }]`);
-        expect(countries[1].people[0].name).to.be.equal(`${ data[0].people[1].name } [${ data[0].people[0].animals.length }]`);
+        expect(countries[1].name).to.be.equal(`${ data[1].name } [${ data[1].people.length }]`);
+        expect(countries[1].people[0].name).to.be.equal(`${ data[1].people[0].name } [${ data[1].people[0].animals.length }]`);
 
-        expect(countries[2].name).to.be.equal(`${ data[0].name } [${ data[2].people.length }]`);
-        expect(countries[2].people[0].name).to.be.equal(`${ data[0].people[0].name } [${ data[2].people[0].animals.length }]`);
+        expect(countries[2].name).to.be.equal(`${ data[2].name } [${ data[2].people.length }]`);
+        expect(countries[2].people[0].name).to.be.equal(`${ data[2].people[0].name } [${ data[2].people[0].animals.length }]`);
     });
 });

@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.data = void 0;
-const data = [{
+const data = [
+    {
         name: 'Dillauti',
-        people: [{
+        people: [
+            {
                 name: 'Winifred Graham',
                 animals: [{ name: 'Anoa' },
                     { name: 'Duck' },
@@ -52,7 +54,8 @@ const data = [{
                     { name: 'Warbler' },
                     { name: 'Duck' },
                     { name: 'Mice' }]
-            }]
+            }
+        ]
     },
     {
         name: 'Tohabdal',
