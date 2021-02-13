@@ -28,9 +28,9 @@
 
 #### Run application
 
-`node app --help` : Help
-`node app --filter=ry` : Filter
-`node app --count` : Count
+* `node app --help` : Help
+* `node app --filter=ry` : Filter
+* `node app --count` : Count
 
 *************************************************
 
