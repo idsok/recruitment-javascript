@@ -1,5 +1,6 @@
 import { ICommand, ICountry } from '../interfaces';
 
+// Count command
 export class CountCommand implements ICommand {
 
     public static readonly $name: string = '--count';

@@ -6,10 +6,10 @@ import { CountCommand } from '../lib/commands/count';
 import { data } from '../data';
 
 describe('Commands controller', () => {
+
+    const commandsController = new CommandsController(data);
     
     it('check commands register', () => {
-        
-        const commandsController = new CommandsController(data);
         
         const commandsList = commandsController.getCommands();
         expect(commandsList.size, 'Commands size not 0').eq(0);
@@ -22,11 +22,11 @@ describe('Commands controller', () => {
 
         const filterCommand = commandsList.get(FilterCommand.$name);
         expect(filterCommand).instanceof(FilterCommand);
+
     });
 
     it('check exectution of commands', () => {
         
-        const commandsController = new CommandsController(data);
         commandsController.registerCommand(FilterCommand.$name, new FilterCommand());
         commandsController.registerCommand(CountCommand.$name, new CountCommand());
 
@@ -46,5 +46,6 @@ describe('Commands controller', () => {
             throwException = true;
         }
         expect(throwException).to.be.true;
+        
     });
 });

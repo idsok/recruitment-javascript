@@ -1,5 +1,6 @@
 import { ICommand, ICountry } from "./interfaces";
 
+// Manages the registration and execution of commands
 export class CommandsController {
 
     private commands: Map<string, ICommand>;

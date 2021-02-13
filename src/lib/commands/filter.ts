@@ -1,5 +1,6 @@
 import { ICommand, ICountry, IPerson } from '../interfaces';
 
+// Filter command implementation
 export class FilterCommand implements ICommand {
 
     public static readonly $name: string = '--filter';
@@ -7,6 +8,12 @@ export class FilterCommand implements ICommand {
     constructor() {}
 
     public execute(countries: ICountry[], filter: string): ICountry[] {
+        if (!filter) {
+            throw new Error('filter parameter is required');
+        }
+        if (typeof filter !== 'string') {
+            throw new Error('filter parameter should be a string');
+        }
         const result: ICountry[] = [];
         for (const country of countries) {
             let countryFound: ICountry;

@@ -3,11 +3,13 @@ import { CountCommand } from "./commands/count";
 import { FilterCommand } from "./commands/filter";
 import { ICountry } from "./interfaces";
 
+// Main class
 export class App {
 
     private commandsController: CommandsController;
 
     constructor(data: ICountry[]) {
+        // Register all commands here
         this.commandsController = new CommandsController(data);
         this.commandsController.registerCommand(FilterCommand.$name, new FilterCommand());
         this.commandsController.registerCommand(CountCommand.$name, new CountCommand());
@@ -17,32 +19,36 @@ export class App {
         try {
             const [ commandName, commandParam ] = param.split('=').map(item => item.trim());
             if (commandName === '--help') {
-                this.printHelp();
+                this.displayHelp();
             } else {
                 const countries = this.commandsController.executeCommand(commandName, commandParam);
-                this.printResult(countries);
+                this.displayResult(countries);
             }
         } catch (ex) {
             console.error('\n\t    error: ' + ex.message);
-            this.printHelp();
+            this.displayHelp();
         }
     }
-    public printHelp() {
+    public displayHelp() {
         console.log(
             `
             Usage: node app [options]
             
             Examples:
-                - node app --filter=ry : Filtrer les pays
+                - node app --filter=ry : Filter animals
             
             Options:
-                --filter=<value>       Filtrer des pays
-                --count                Compter les personnes et les animaux
-                --help                 Aide en ligne
+                --filter=<value>       Filter animals
+                --count                Counting people and animals
+                --help                 Help
             `
         );
     }
-    private printResult(countries: ICountry[]) {
-        console.log(JSON.stringify(countries, null, '  '));
+    private displayResult(countries: ICountry[]) {
+        if (countries.length) {
+            console.log(JSON.stringify(countries, null, '  '));
+        } else {
+            console.log("Empty result !")
+        }
     }
 }

@@ -8,5 +8,5 @@ const args: string[] = process.argv;
 if (args.length === 3) {
     app.executeCommand(args[2]);
 } else {
-    app.printHelp();
+    app.displayHelp();
 }

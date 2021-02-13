@@ -1,11 +1,8 @@
 import 'mocha';
-import * as chai from 'chai';
+import { expect } from 'chai';
 import { data } from '../../data';
 import { ICommand, ICountry } from '../../lib/interfaces';
 import { CountCommand } from '../../lib/commands/count';
-
-const expect = chai.expect;
-const assert = chai.assert;
 
 describe('Count command', () => {
     
@@ -25,4 +22,5 @@ describe('Count command', () => {
         expect(countries[2].name).to.be.equal(`${ data[2].name } [${ data[2].people.length }]`);
         expect(countries[2].people[0].name).to.be.equal(`${ data[2].people[0].name } [${ data[2].people[0].animals.length }]`);
     });
+    
 });
